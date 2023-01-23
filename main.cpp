@@ -6,7 +6,7 @@
 #include <message.h>
 
 
-void testInvoke(QObject* rootObject)
+void TestInvoke(QObject* rootObject)
 {
     QVariant return_value;
     QVariant msg = "this is a c++ parameter ";
@@ -29,6 +29,6 @@ int main(int argc, char *argv[])
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 
     auto root_object = engine.rootObjects().first();
-    testInvoke(root_object);
+    TestInvoke(root_object);
     return app.exec();
 }

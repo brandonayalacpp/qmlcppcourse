@@ -14,6 +14,12 @@ ApplicationWindow {
 //        onMessageChange: textId.text = value;
 //    }
 
+    function javaScriptFunction(value)
+    {
+        print("c++ called the javaScriptFunction with parameter" + value);
+        return "this message was return from java scriptfunction";
+    }
+
     Column
     {
         Text
