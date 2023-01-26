@@ -14,6 +14,24 @@ ApplicationWindow {
 //        onMessageChange: textId.text = value;
 //    }
 
+    function logger(element)
+    {
+        print("Array element " + element)
+    }
+
+    function logArray(someArray)
+    {
+        someArray.forEach(logger)
+    }
+
+    function logMap(someMap)
+    {
+        for(var element in someMap)
+        {
+            print("some item", element, "=", someMap[element] )
+        }
+    }
+
     function javaScriptFunction(value)
     {
         print("c++ called the javaScriptFunction with parameter" + value);

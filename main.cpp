@@ -3,7 +3,8 @@
 #include <QQmlContext>
 #include <QDebug>
 
-#include <message.h>
+#include "message.h"
+#include "DataTypes.h"
 
 
 void TestInvoke(QObject* rootObject)
@@ -30,5 +31,11 @@ int main(int argc, char *argv[])
 
     auto root_object = engine.rootObjects().first();
     TestInvoke(root_object);
+
+    DataTypes myDataTypes;
+    myDataTypes.logVariantList(root_object);
+    myDataTypes.logVariantMap(root_object);
+
+
     return app.exec();
 }
